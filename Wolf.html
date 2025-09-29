@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Wolf Designs Pottery</title> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/jpeg" href="wolflogo.jpg">
+    
+    <style>
+        /*
+            --- CSS STYLES BEGIN HERE ---
+        */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #F8F8F4;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #E0E0E0;
+            margin: 40px 0;
+        }
+
+        /* --- Header & Navigation --- */
+
+        header {
+            background: #FFFFFF;
+            border-bottom: 1px solid #E0E0E0;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #A0522D; /* Accent color for the logo */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul a:hover {
+            color: #A0522D;
+        }
+
+        /* --- Buttons --- */
+
+        .btn {
+            display: inline-block;
+            background-color: #A0522D;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 3px;
+            font-weight: 400;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #8B4513;
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.8rem;
+        }
+
+        /* --- Hero Section --- */
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 0 0;
+        }
+
+        .hero-content {
+            padding-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.2em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 450px;
+            background-color: #E0E0E0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-style: italic;
+            font-size: 1.5rem;
+            overflow: hidden;
+        }
+
+        /* --- Featured Products Grid --- */
+
+        .featured {
+            padding: 40px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            text-align: center;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border: 1px solid #EEE;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .product-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #DCDCDC;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #777;
+            font-style: italic;
+            overflow: hidden;
+        }
+        
+        .product-image-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .product-card p {
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Process Section --- */
+
+        .process-section {
+            background-color: #F0F0E8;
+            padding: 60px 0;
+        }
+
+        .process-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            text-align: left;
+        }
+
+        .process-text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .process-text h2 {
+            text-align: left;
+            font-size: 2.2rem;
+            margin-bottom: 0.5em;
+        }
+
+        .process-text p {
+            margin-bottom: 20px;
+        }
+
+        .process-image-placeholder {
+            flex: 1;
+            min-height: 400px;
+            background-color: #C0C0C0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* --- Contact Section --- */
+
+        .contact-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #A0522D;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* --- Footer --- */
+
+        footer {
+            background-color: #333;
+            color: #AAA;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: #AAA;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FFFFFF;
+        }
+
+        /* --- Responsiveness --- */
+
+        @media (max-width: 800px) {
+            .process-content {
+                flex-direction: column;
+            }
+
+            .process-text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .process-text h2 {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                padding-top: 10px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image-placeholder {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Modern Wolf Designs</div> <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hand-Thrown Simplicity</h1>
+                <p>Functional forms for everyday life, crafted with soul and earth.</p>
+                <a href="#shop" class="btn">Explore The Collection</a>
+            </div>
+            <div class="hero-image-placeholder">
+                
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="shop" class="featured container">
+            <h2>Featured Pieces</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        <img src="cup1.webp" alt="A cup with black swirls on the top the rest is white" title="Black Swirl Cup">
+                    </div>
+                    <h3>The Horizon Mug</h3>
+                    <p>Stoneware, Speckled Glaze</p>
+                    <a href="#" class="btn-small">$70</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        
+                    </div>
+                    <h3>Riverbed Vase</h3>
+                    <p>Earthenware, Matte Finish</p>
+                    <a href="#" class="btn-small">$78</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        
+                    </div>
+                    <h3>Dune Plate Set</h3>
+                    <p>Porcelain, Textured Edge</p>
+                    <a href="#" class="btn-small">$120</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="process" class="process-section">
+            <div class="container process-content">
+                <div class="process-text">
+                    <h2>The love in the creation process </h2>
+                    <p>Every piece is made with love and heart. This is a business made from the love of pottery, and your support and purchases will help power the creation of more pieces.</p>
+<p>No pieces are rushed, and all are made slowly and delicately.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="process-image-placeholder">
+                    
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="container contact-section">
+            <h2>Get In Touch</h2>
+            <p>For custom orders, collaborations, or simply to say hello.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Modern Wolf Designs. All Rights Reserved.</p> <div class="social-links">
+             <a href="https://www.instagram.com/modernwolfdesigns/">Instagram</a> 
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
